@@ -25,16 +25,15 @@ class Node:
         if not isinstance(node, (type(None), Node)):
             raise TypeError
 
-
     @property
     def next(self):
         return self.__next
 
     @next.setter
     def next(self, value):
+        print("Вызван setter")
         self.is_valid(value)
         self.__next = value
-
 
 
 if __name__ == "__main__":

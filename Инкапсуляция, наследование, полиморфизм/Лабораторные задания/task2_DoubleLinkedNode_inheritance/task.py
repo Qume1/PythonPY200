@@ -32,4 +32,14 @@ class Node:
         self.is_valid(next_)
         self._next = next_
 
-# TODO реализовать класс DoubleLinkedNode
+
+class DoubleLinkedNode(Node):
+    def __init__(self, value, next_, prev):
+        ...
+
+    def __repr__(self):
+        return f"Node({self.value}, {None})" if self.next is None else f"Node({self.value}, Node({self.next}))"
+
+    """str - наследуется"""
+
+    """is_valid - перегружается/ или делается динамическим"""
