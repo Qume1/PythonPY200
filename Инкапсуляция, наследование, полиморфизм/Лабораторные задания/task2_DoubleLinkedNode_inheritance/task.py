@@ -38,7 +38,13 @@ class DoubleLinkedNode(Node):
         ...
 
     def __repr__(self):
-        return f"DoubleLinkedNode({self.value}, {None})" if self.next is None else f"Node({self.value}, Node({self.next}))"
+        next_repr: str = str(None) \
+            if self.next is None \
+            else f"DoubleLinkedNode({self.next.value}, {None}, {None})"
+        prev_repr: str = str(None) \
+            if self.next is None \
+            else f"DoubleLinkedNode({self.prev.value}, {None}, {None})"
+        return
 
     """str - наследуется"""
 
