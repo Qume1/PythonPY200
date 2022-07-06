@@ -33,7 +33,6 @@ class DoubleLinkedList(LinkedList):
         right_node.prev = left_node
 
     def append(self, value: Any):
-        """ Добавление элемента в конец связного списка. """
         append_node = DoubleLinkedNode(value)
 
         if self.head is None:
@@ -47,7 +46,3 @@ class DoubleLinkedList(LinkedList):
 
 if __name__ == "__main__":
     ll = DoubleLinkedList([1, 2, 3, 4, 5])
-
-    ll.clear()
-
-    print(ll)
