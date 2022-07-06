@@ -42,12 +42,7 @@ class LinkedList:
 
     @staticmethod
     def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:
-        """
-        Функция, которая связывает между собой два узла.
 
-        :param left_node: Левый или предыдущий узел
-        :param right_node: Правый или следующий узел
-        """
         left_node.next = right_node
 
     def __getitem__(self, index: int) -> Any:

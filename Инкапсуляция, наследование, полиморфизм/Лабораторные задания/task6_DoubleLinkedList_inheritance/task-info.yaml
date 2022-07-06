@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 2127
+  - offset: 1941
     length: 0
     placeholder_text: '# TODO Реализовать класс DoubleLinkedList'
     initial_state:

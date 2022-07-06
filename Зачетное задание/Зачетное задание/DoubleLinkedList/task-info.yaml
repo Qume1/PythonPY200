@@ -36,8 +36,8 @@ files:
     if __name__ == "__main__":
         ...
   learner_created: false
-status: Solved
-feedback:
-  message: Congratulations!
-  time: Wed, 06 Jul 2022 10:02:57 UTC
+- name: linked_list.py
+  visible: true
+  learner_created: true
+status: Unchecked
 record: -1

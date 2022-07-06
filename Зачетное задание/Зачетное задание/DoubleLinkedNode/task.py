@@ -29,7 +29,7 @@ class Node:
 
 
 class DoubleLinkedNode(Node):
-    def __init__(self, value, next_, prev):
+    def __init__(self, value, next_: Optional["Node"] = None, prev: Optional["Node"] = None):
         super().__init__(value, next_)
         self.prev = prev
 
@@ -42,10 +42,19 @@ class DoubleLinkedNode(Node):
             else f"DoubleLinkedNode({self.prev.value}, {None}, {None})"
         return f"DoubleLinkedNode({self.value}, {next_repr}, {prev_repr})"
 
-    def __str__(self):
-        return super().__str__()
+    @property
+    def prev(self):
+        return self._prev
+
+    @prev.setter
+    def prev(self, node):
+        self.is_valid(node)
+        self._prev = node
 
 
 
 if __name__ == "__main__":
-    ...
+    first_node = DoubleLinkedNode(1)
+    second_node = DoubleLinkedNode(2)
+
+
