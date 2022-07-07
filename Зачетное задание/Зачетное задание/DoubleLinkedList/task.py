@@ -83,11 +83,14 @@ class DoubleLinkedList(LinkedList):
         right_node.prev = left_node
 
     def insert(self, x, value):
-        prev_node = self.step_by_step_on_nodes(x-1)
-        node = self.step_by_step_on_nodes(x)
-        next_node = self.step_by_step_on_nodes(x+1)
         new_node = DoubleLinkedNode(value)
-        prev_node.next = node
+        node = self.step_by_step_on_nodes(x)
+        prev_node = self.step_by_step_on_nodes(x - 1)
+        prev_node.next = new_node
+        new_node.prev = prev_node
+        node.prev = new_node
+        new_node.next = node
+        self.len += 1
 
 
 if __name__ == "__main__":
