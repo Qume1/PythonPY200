@@ -75,17 +75,6 @@ class LinkedList:
 
         self.len = 0
 
-    def count_(self, x):
-        count = 0
-        i = None
-        y = DoubleLinkedList.nodes_iterator(self)
-        for _ in range(self.len):
-            i = next(y)
-            if i.value == x:
-                count += 1
-
-        return count
-
 
 class DoubleLinkedList(LinkedList):
     @staticmethod
@@ -103,7 +92,16 @@ class DoubleLinkedList(LinkedList):
         new_node.next = node
         self.len += 1
 
-    
+    def count_(self, x):
+        count = 0
+        i = None
+        y = DoubleLinkedList.nodes_iterator(self)
+        for _ in range(self.len):
+            i = next(y)
+            if i.value == x:
+                count += 1
+
+        return count
 
 
 if __name__ == "__main__":
